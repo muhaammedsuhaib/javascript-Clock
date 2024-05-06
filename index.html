@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="shortcut icon" href="https://png.pngtree.com/thumb_back/fw800/background/20230712/pngtree-close-up-3d-rendering-of-a-black-classic-analog-alarm-clock-image_3844463.jpg" type="image/x-icon">
+<title>suhaib.com</title>
+</head>
+<body>
+   <div class="top" >
+    <div class="topin" >
+        <p class="NAME">MUHAMMED SUHAIB</p>
+        <i class="fa fa-instagram"><a target="_blank" href="https://www.instagram.com/suhaii.bb?igsh=ODhhanN0NjYxNmJs" style="text-decoration: none;color: aliceblue;"> suhaib</a></i>
+        <h1 id="clock"></h1>
+        <p id="demo"></p>
+    </div>
+   </div>
+<script>
+  function updateClock() {
+    var now = new Date();
+    var timeString = now.toLocaleTimeString();
+    document.getElementById('clock').textContent = timeString;
+  }
+   // today data get
+   var today = new Date();
+
+// months in array
+var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+// day , month , year get data
+var day = today.getDate();
+var month = months[today.getMonth()];
+var year = today.getFullYear();
+
+// date display
+document.getElementById('demo').innerHTML = "Today is " + month + " " + day + ", " + year + ".";
+
+  setInterval(updateClock, 1000);
+  updateClock(); //calling function
+</script>
+</body>
+</html>
